@@ -12,7 +12,6 @@ int main()
 	cout << "   -----------  \n";
 	cout << "    ^^    ^^    \n";
 
-	cout << "bla";
 
 
 
