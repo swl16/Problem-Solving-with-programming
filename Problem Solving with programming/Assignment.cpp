@@ -12,7 +12,7 @@ int main()
 	cout << "   -----------  \n";
 	cout << "    ^^    ^^    \n";
 
-
+	cout << "Please fill in your personal's infomation before you book your train ticket. \n\n";
 
 
 
