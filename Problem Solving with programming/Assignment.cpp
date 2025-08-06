@@ -18,7 +18,7 @@ int main()
 	cout << "  /--         | \n";
 	cout << "  |           | \n";
 	cout << "   -----------  \n";
-	cout << "    ooo   ooo   \n";
+	cout << "    000   000   \n";
 
 	cout << "\nWelcome to TWD Train Ticket Booking System!\n\n";
 
