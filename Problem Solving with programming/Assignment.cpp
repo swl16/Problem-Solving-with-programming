@@ -1,6 +1,6 @@
-#include<iostream>
-#include<string>
-#include<iomanip>
+#include <iostream>
+#include <string>
+#include <iomanip>
 using namespace std;
 
 void Menu() {
@@ -82,6 +82,7 @@ int main()
 	} while (choice != 'Y' && choice != 'y');
 
 
+
 	cout << "\nThis is the infomation.\n\n";
 	cout << "Name : " << user_name << endl;
 	cout << "IC Number / Passport Number : " << ic_number << endl;
@@ -120,7 +121,7 @@ int main()
 				cout << "1.Kajang\n2.Rawang\n3.Klang\n4.Shah Alam\n";
 				cin >> selangor1;
 			}
-
+      
 			else if (origin1 == 'b' || origin1 == 'B') {
 				int penang1;
 				cout << "1.Butterworth\n";
@@ -210,8 +211,6 @@ int main()
 		}
 	} while (menu_choose != 3);
 
-//Statement1:
-//	cout << "hi";
 
 	return 0;
 }
