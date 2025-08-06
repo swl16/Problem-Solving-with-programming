@@ -109,11 +109,12 @@ int main()
 		if (menu_choose == 1) {
 			/*goto Statement1;*/
 			char origin1;
-			cout << "Please choose you origin.\n";
+			cout << "ORIGIN\n";
 			cout << "a)Selangor\n";
-			cout << "b)Pulau Penang\n";
+			cout << "b)Penang\n";
 			cout << "c)Melaka\n";
 			cout << "d)Johor\n";
+			cout << "Please choose you origin : ";
 			cin >> origin1;
 
 			if (origin1 == 'a' || origin1 == 'A') {
@@ -144,9 +145,10 @@ int main()
 			char destination;
 			cout << "Please choose you destination.\n";
 			cout << "a)Selangor\n";
-			cout << "b)Pulau Penang\n";
+			cout << "b)Penang\n";
 			cout << "c)Melaka\n";
 			cout << "d)Johor\n";
+			cout << "Please choose you destination : ";
 			cin >> destination;
 
 			if (destination == 'a' || destination == 'A') {
@@ -175,22 +177,16 @@ int main()
 			}
 
 			int time;
-			cout << "Please choose your time.\n";
-			cout << "1.  08:00 a.m." << endl;
+			cout << "DEPARTURE TIME\n";
+			cout << "1.  0:00 a.m." << endl;
 			cout << "2.  09:00 a.m." << endl;
 			cout << "3.  10:00 a.m." << endl;
-			cout << "4.  11:00 p.m." << endl;
+			cout << "4.  11:00 a.m." << endl;
 			cout << "5.  13:00 p.m." << endl;
 			cout << "6.  15:00 p.m." << endl;
 			cout << "7.  17:00 p.m." << endl;
 			cout << "8.  18:00 p.m." << endl;
 			cout << "9.  19:00 p.m." << endl;
-			cout << "10. 20:00 p.m." << endl;
-			cout << "11. 22:00 p.m." << endl;
-			cout << "12. 00:00 a.m." << endl;
-			cout << "13. 02:00 a.m." << endl;
-			cout << "14. 04:00 a.m." << endl;
-			cout << "15. 06:00 a.m." << endl;
 			cin >> time;
 		}
 		else if (menu_choose == 2) {
