@@ -63,6 +63,7 @@ int main()
 			cin >> ic_number;
 			cout << "Date of Birth (DD/MM/YYYY) : ";
 			cin >> date >> slash_1 >> month >> slash_2 >> year;
+			cin.ignore();
 			cout << "Gender (F/M) : ";
 			cin >> gender;
 
