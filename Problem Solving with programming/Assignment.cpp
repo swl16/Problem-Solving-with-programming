@@ -178,15 +178,9 @@ int main()
 
 			int time;
 			cout << "DEPARTURE TIME\n";
-			cout << "1.  0:00 a.m." << endl;
-			cout << "2.  09:00 a.m." << endl;
-			cout << "3.  10:00 a.m." << endl;
-			cout << "4.  11:00 a.m." << endl;
-			cout << "5.  13:00 p.m." << endl;
-			cout << "6.  15:00 p.m." << endl;
-			cout << "7.  17:00 p.m." << endl;
-			cout << "8.  18:00 p.m." << endl;
-			cout << "9.  19:00 p.m." << endl;
+			cout << "1.  10:00 a.m." << endl;
+			cout << "2.  13:00 p.m." << endl;
+			cout << "3.  15:00 p.m." << endl;
 			cin >> time;
 		}
 		else if (menu_choose == 2) {
