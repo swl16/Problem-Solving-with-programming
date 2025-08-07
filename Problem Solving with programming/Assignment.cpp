@@ -24,9 +24,6 @@ int main()
 
 	string user_name, email, ic_number;
 	int phone_number;
-	int date, month, year;
-	char slash_1, slash_2;
-	char gender;
 
 	cout << "Please fill in your personal's infomation before you book your train ticket. \n\n";
 	cout << "---------------------------------------------------------------------------------\n";
@@ -35,11 +32,6 @@ int main()
 	getline(cin, user_name);
 	cout << "IC Number / Passport Number (without -) : ";
 	cin >> ic_number;
-	cout << "Date of Birth (DD/MM/YYYY) : ";
-	cin >> date >> slash_1 >> month >> slash_2 >> year;
-	cin.ignore();
-	cout << "Gender (F/M) : ";
-	cin >> gender;
 
 	cout << "\nCONTACT INFOMATION\n";
 	cout << "Phone number (without -) : +60";
@@ -61,11 +53,6 @@ int main()
 			getline(cin, user_name);
 			cout << "IC Number / Passport Number (without -) : ";
 			cin >> ic_number;
-			cout << "Date of Birth (DD/MM/YYYY) : ";
-			cin >> date >> slash_1 >> month >> slash_2 >> year;
-			cin.ignore();
-			cout << "Gender (F/M) : ";
-			cin >> gender;
 
 			cout << "\nCONTACT INFOMATION\n";
 			cout << "Phone number (without -) : +60";
@@ -86,8 +73,6 @@ int main()
 	cout << "\nThis is the infomation.\n\n";
 	cout << "Name : " << user_name << endl;
 	cout << "IC Number / Passport Number : " << ic_number << endl;
-	cout << "Date of Birth : " << date << "/" << month << "/" << year << endl;
-	cout << "Gender : " << gender << endl << endl;
 	cout << "Phone Number : +60" << phone_number << endl;
 	cout << "Email : " << email << endl;
 
