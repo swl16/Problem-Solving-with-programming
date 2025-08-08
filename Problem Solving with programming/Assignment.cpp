@@ -81,11 +81,7 @@ int main()
 	cin.get();
 
 	int menu_choose;
-	/*cout << "\nWelcome to TWD Train Ticket Booking System!\n";
-	cout << "Please choose. (1-3)\n";
-	cout << "1. BUY TICKET \n";
-	cout << "2. CONTACT US \n";
-	cout << "3. EXIT \n";*/
+	
 
 	do{
 		Menu();
