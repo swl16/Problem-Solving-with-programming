@@ -86,6 +86,7 @@ int main()
 
 	do{
 		Menu();
+		cout << "CHOICE : ";
 		cin >> menu_choose;
 
 		if (menu_choose == 1) {
