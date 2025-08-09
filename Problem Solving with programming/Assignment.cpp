@@ -84,89 +84,457 @@ int main()
 
 	int menu_choose;
 	
+	int trainno, deptime, deptime1, deptime2, ftime, pax;
+	string date1, date2;
+	char choice1;
+	char choice2;
+	double money = 0.0;
 
 	do{
 		Menu();
 		cin >> menu_choose;
 
 		if (menu_choose == 1) {
-			/*goto Statement1;*/
-			char origin1;
-			cout << "ORIGIN\n";
-			cout << "a)Selangor\n";
-			cout << "b)Penang\n";
-			cout << "c)Melaka\n";
-			cout << "d)Johor\n";
-			cout << "Please choose you origin : ";
-			cin >> origin1;
+				cout << "AVAILABLE TRAIN:\n\n";
+				cout << left << setw(10) << "Train No" << setw(15) << "ORIGIN" << setw(15) << "DESTINATION" << endl;
+				cout << left << setw(10) << "001" << setw(15) << "Kuala Lumpur" << setw(15) << "Butterworth" << endl;
+				cout << left << setw(10) << "002" << setw(15) << "Kajang" << setw(15) << "JB Sentral" << endl;
+				cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
 
-			if (origin1 == 'a' || origin1 == 'A') {
-				int selangor1;
-				cout << "1.Kajang\n2.Rawang\n3.Klang\n4.Shah Alam\n";
-				cin >> selangor1;
-			}
-      
-			else if (origin1 == 'b' || origin1 == 'B') {
-				int penang1;
-				cout << "1.Butterworth\n";
-				cin >> penang1;
-			}
-			else if (origin1 == 'c' || origin1 == 'C') {
-				int melaka1;
-				cout << "1.Melaka City\n";
-				cin >> melaka1;
-			}
-			else if (origin1 == 'd' || origin1 == 'D') {
-				int johor1;
-				cout << "1.Johor Bahru\n2.Batu Pahat\n3.Muar\n";
-				cin >> johor1;
-			}
-			else {
-				cout << "Invalid Input!";
-			}
+				cout << "\nPlease choose your train number : ";
+				cin >> trainno;
+				cout << endl;
 
-			char destination;
-			cout << "Please choose you destination.\n";
-			cout << "a)Selangor\n";
-			cout << "b)Penang\n";
-			cout << "c)Melaka\n";
-			cout << "d)Johor\n";
-			cout << "Please choose you destination : ";
-			cin >> destination;
+				switch (trainno) {
+				case 1:
+					cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+					cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
+					cout << left << setw(5) << "2" << setw(15) << "12:00PM" << setw(15) << "RM 96.00" << endl;
+					cout << left << setw(5) << "3" << setw(15) << "15:00PM" << setw(15) << "RM 96.00" << endl;
+					cout << "\nPlease choose your departure time : ";
+					cin >> deptime;
+					if (deptime == 1) {
+						ftime = 10.00;
+						money = 96.00;
+					}
+					else if (deptime == 2) {
+						ftime = 12.00;
+						money = 96.00;
+					}
+					else if (deptime == 3) {
+						ftime = 15.00;
+						money = 96.00;
+					}
+					break;
+				case 2:
+					cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+					cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 50.00" << endl;
+					cout << left << setw(5) << "2" << setw(15) << "13:00PM" << setw(15) << "RM 50.00" << endl;
+					cout << left << setw(5) << "3" << setw(15) << "16:00PM" << setw(15) << "RM 50.00" << endl;
+					cout << "\nPlease choose your departure time : ";
+					cin >> deptime1;
+					if (deptime1 == 1) {
+						ftime = 10.00;
+						money = 50.00;
+					}
+					else if (deptime1 == 2) {
+						ftime = 13.00;
+						money = 50.00;
+					}
+					else if (deptime1 == 3) {
+						ftime = 16.00;
+						money = 50.00;
+					}
+					break;
+				case 3:
+					cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+					cout << left << setw(5) << "1" << setw(15) << "11:00AM" << setw(15) << "RM 56.00" << endl;
+					cout << left << setw(5) << "2" << setw(15) << "14:00PM" << setw(15) << "RM 56.00" << endl;
+					cout << left << setw(5) << "3" << setw(15) << "16:00PM" << setw(15) << "RM 56.00" << endl;
+					cout << "\nPlease choose your departure time : ";
+					cin >> deptime2;
+					if (deptime2 == 1) {
+						ftime = 11.00;
+						money = 56.00;
+					}
+					else if (deptime2 == 2) {
+						ftime = 14.00;
+						money = 56.00;
+					}
+					else if (deptime2 == 3) {
+						ftime = 16.00;
+						money = 56.00;
+					}
+					break;
+				default:
+					cout << "Invalid";
+					break;
+				}
+				cout << endl;
+				cout << "Departure date : ";
+				cin >> date1;
+				cout << "Number of pax : ";
+				cin >> pax;
 
-			if (destination == 'a' || destination == 'A') {
-				int selangor2;
-				cout << "1.Kajang\n2.Rawang\n3.Klang\n4.Shah Alam\n";
-				cin >> selangor2;
-			}
+				cout << "\nTICKET CONFIRMATION" << endl;
+				cout << "--------------------" << endl;
+				cout << "Train No : " << trainno << endl;
+				cout << "Departure Time : " << ftime << ":00";
+				if (ftime >= 12) {
+					cout << "PM\n";
+				}
+				else {
+					cout << "AM\n";
+				}
+				cout << "Departure Date : " << date1 << endl;
+				cout << "Number of pax : " << pax << endl;
+				cout << "Price : RM" << money << ".00" << endl;
 
-			else if (destination == 'b' || destination == 'B') {
-				int penang2;
-				cout << "1.Butterworth\n";
-				cin >> penang2;
-			}
-			else if (destination == 'c' || destination == 'C') {
-				int melaka2;
-				cout << "1.Melaka City\n";
-				cin >> melaka2;
-			}
-			else if (destination == 'd' || destination == 'D') {
-				int johor2;
-				cout << "1.Johor Bahru\n2.Batu Pahat\n3.Muar\n";
-				cin >> johor2;
-			}
-			else {
-				cout << "Invalid Input!";
-			}
+				do {
+					cout << "\nPlease confirm your ticket is correct(Y/N) : ";
+					cin >> choice1;
+					cout << endl;
 
-			int time;
-			cout << "DEPARTURE TIME\n";
-			cout << "1.  10:00 a.m." << endl;
-			cout << "2.  13:00 p.m." << endl;
-			cout << "3.  15:00 p.m." << endl;
-			cin >> time;
-		}
-		else if (menu_choose == 2) {
+					if (choice1 == 'n' || choice1 == 'N') {
+						cout << "AVAILABLE TRAIN:\n\n";
+						cout << left << setw(10) << "Train No" << setw(15) << "ORIGIN" << setw(15) << "DESTINATION" << endl;
+						cout << left << setw(10) << "001" << setw(15) << "Kuala Lumpur" << setw(15) << "Butterworth" << endl;
+						cout << left << setw(10) << "002" << setw(15) << "Kajang" << setw(15) << "JB Sentral" << endl;
+						cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
+
+						cout << "\nPlease choose your train number : ";
+						cin >> trainno;
+						cout << endl;
+
+						switch (trainno) {
+						case 1:
+							cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+							cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
+							cout << left << setw(5) << "2" << setw(15) << "12:00PM" << setw(15) << "RM 96.00" << endl;
+							cout << left << setw(5) << "3" << setw(15) << "15:00PM" << setw(15) << "RM 96.00" << endl;
+							cout << "\nPlease choose your departure time : ";
+							cin >> deptime;
+							if (deptime == 1) {
+								ftime = 10.00;
+								money = 96.00;
+							}
+							else if (deptime == 2) {
+								ftime = 12.00;
+								money = 96.00;
+							}
+							else if (deptime == 3) {
+								ftime = 15.00;
+								money = 96.00;
+							}
+							break;
+						case 2:
+							cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+							cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 50.00" << endl;
+							cout << left << setw(5) << "2" << setw(15) << "13:00PM" << setw(15) << "RM 50.00" << endl;
+							cout << left << setw(5) << "3" << setw(15) << "16:00PM" << setw(15) << "RM 50.00" << endl;
+							cout << "\nPlease choose your departure time : ";
+							cin >> deptime1;
+							if (deptime1 == 1) {
+								ftime = 10.00;
+								money = 50.00;
+							}
+							else if (deptime1 == 2) {
+								ftime = 13.00;
+								money = 50.00;
+							}
+							else if (deptime1 == 3) {
+								ftime = 16.00;
+								money = 50.00;
+							}
+							break;
+						case 3:
+							cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+							cout << left << setw(5) << "1" << setw(15) << "11:00AM" << setw(15) << "RM 56.00" << endl;
+							cout << left << setw(5) << "2" << setw(15) << "14:00PM" << setw(15) << "RM 56.00" << endl;
+							cout << left << setw(5) << "3" << setw(15) << "16:00PM" << setw(15) << "RM 56.00" << endl;
+							cout << "\nPlease choose your departure time : ";
+							cin >> deptime2;
+							if (deptime2 == 1) {
+								ftime = 11.00;
+								money = 56.00;
+							}
+							else if (deptime2 == 2) {
+								ftime = 14.00;
+								money = 56.00;
+							}
+							else if (deptime2 == 3) {
+								ftime = 16.00;
+								money = 56.00;
+							}
+							break;
+						default:
+							cout << "Invalid";
+							break;
+						}
+						cout << endl;
+						cout << "Departure date : ";
+						cin >> date1;
+						cout << "Number of pax : ";
+						cin >> pax;
+
+						cout << "\nTICKET CONFIRMATION" << endl;
+						cout << "--------------------" << endl;
+						cout << "Train No : " << trainno << endl;
+						cout << "Departure Time : " << ftime << ":00";
+						if (ftime >= 12) {
+							cout << "PM\n";
+						}
+						else {
+							cout << "AM\n";
+						}
+						cout << "Departure Date : " << date1 << endl;
+						cout << "Number of pax : " << pax << endl;
+						cout << "Price : RM" << money << ".00" << endl;
+					}
+					else if (choice1 == 'y' || choice1 == 'Y') {
+						break;
+					}
+					else {
+						cout << "Invalid" << endl;
+					}
+				} while (choice1 != 'y' || choice1 != 'Y');
+
+				do {
+					cout << "Do you need to add on?(Y/N) : ";
+					cin >> choice2;
+					cout << endl;
+
+					if (choice2 == 'y' || choice2 == 'Y') {
+						cout << "AVAILABLE TRAIN:\n\n";
+						cout << left << setw(10) << "Train No" << setw(15) << "ORIGIN" << setw(15) << "DESTINATION" << endl;
+						cout << left << setw(10) << "001" << setw(15) << "Kuala Lumpur" << setw(15) << "Butterworth" << endl;
+						cout << left << setw(10) << "002" << setw(15) << "Kajang" << setw(15) << "JB Sentral" << endl;
+						cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
+
+						cout << "\nPlease choose your train number : ";
+						cin >> trainno;
+						cout << endl;
+
+						switch (trainno) {
+						case 1:
+							cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+							cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
+							cout << left << setw(5) << "2" << setw(15) << "12:00PM" << setw(15) << "RM 96.00" << endl;
+							cout << left << setw(5) << "3" << setw(15) << "15:00PM" << setw(15) << "RM 96.00" << endl;
+							cout << "\nPlease choose your departure time : ";
+							cin >> deptime;
+							if (deptime == 1) {
+								ftime = 10.00;
+								money = 96.00;
+							}
+							else if (deptime == 2) {
+								ftime = 12.00;
+								money = 96.00;
+							}
+							else if (deptime == 3) {
+								ftime = 15.00;
+								money = 96.00;
+							}
+							break;
+						case 2:
+							cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+							cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 50.00" << endl;
+							cout << left << setw(5) << "2" << setw(15) << "13:00PM" << setw(15) << "RM 50.00" << endl;
+							cout << left << setw(5) << "3" << setw(15) << "16:00PM" << setw(15) << "RM 50.00" << endl;
+							cout << "\nPlease choose your departure time : ";
+							cin >> deptime1;
+							if (deptime1 == 1) {
+								ftime = 10.00;
+								money = 50.00;
+							}
+							else if (deptime1 == 2) {
+								ftime = 13.00;
+								money = 50.00;
+							}
+							else if (deptime1 == 3) {
+								ftime = 16.00;
+								money = 50.00;
+							}
+							break;
+						case 3:
+							cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+							cout << left << setw(5) << "1" << setw(15) << "11:00AM" << setw(15) << "RM 56.00" << endl;
+							cout << left << setw(5) << "2" << setw(15) << "14:00PM" << setw(15) << "RM 56.00" << endl;
+							cout << left << setw(5) << "3" << setw(15) << "16:00PM" << setw(15) << "RM 56.00" << endl;
+							cout << "\nPlease choose your departure time : ";
+							cin >> deptime2;
+							if (deptime2 == 1) {
+								ftime = 11.00;
+								money = 56.00;
+							}
+							else if (deptime2 == 2) {
+								ftime = 14.00;
+								money = 56.00;
+							}
+							else if (deptime2 == 3) {
+								ftime = 16.00;
+								money = 56.00;
+							}
+							break;
+						default:
+							cout << "Invalid";
+							break;
+						}
+						cout << endl;
+						cout << "Departure date : ";
+						cin >> date1;
+						cout << "Number of pax : ";
+						cin >> pax;
+
+						cout << "\nTICKET CONFIRMATION" << endl;
+						cout << "--------------------" << endl;
+						cout << "Train No : " << trainno << endl;
+						cout << "Departure Time : " << ftime << ":00";
+						if (ftime >= 12) {
+							cout << "PM\n";
+						}
+						else {
+							cout << "AM\n";
+						}
+						cout << "Departure Date : " << date1 << endl;
+						cout << "Number of pax : " << pax << endl;
+						cout << "Price : RM" << money << ".00" << endl;
+
+						do {
+							cout << "\nPlease confirm your ticket is correct(Y/N) : ";
+							cin >> choice1;
+							cout << endl;
+
+							if (choice1 == 'n' || choice1 == 'N') {
+								cout << "AVAILABLE TRAIN:\n\n";
+								cout << left << setw(10) << "Train No" << setw(15) << "ORIGIN" << setw(15) << "DESTINATION" << endl;
+								cout << left << setw(10) << "001" << setw(15) << "Kuala Lumpur" << setw(15) << "Butterworth" << endl;
+								cout << left << setw(10) << "002" << setw(15) << "Kajang" << setw(15) << "JB Sentral" << endl;
+								cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
+
+								cout << "\nPlease choose your train number : ";
+								cin >> trainno;
+								cout << endl;
+
+								switch (trainno) {
+								case 1:
+									cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+									cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
+									cout << left << setw(5) << "2" << setw(15) << "12:00PM" << setw(15) << "RM 96.00" << endl;
+									cout << left << setw(5) << "3" << setw(15) << "15:00PM" << setw(15) << "RM 96.00" << endl;
+									cout << "\nPlease choose your departure time : ";
+									cin >> deptime;
+									if (deptime == 1) {
+										ftime = 10.00;
+										money = 96.00;
+									}
+									else if (deptime == 2) {
+										ftime = 12.00;
+										money = 96.00;
+									}
+									else if (deptime == 3) {
+										ftime = 15.00;
+										money = 96.00;
+									}
+									break;
+								case 2:
+									cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+									cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 50.00" << endl;
+									cout << left << setw(5) << "2" << setw(15) << "13:00PM" << setw(15) << "RM 50.00" << endl;
+									cout << left << setw(5) << "3" << setw(15) << "16:00PM" << setw(15) << "RM 50.00" << endl;
+									cout << "\nPlease choose your departure time : ";
+									cin >> deptime1;
+									if (deptime1 == 1) {
+										ftime = 10.00;
+										money = 50.00;
+									}
+									else if (deptime1 == 2) {
+										ftime = 13.00;
+										money = 50.00;
+									}
+									else if (deptime1 == 3) {
+										ftime = 16.00;
+										money = 50.00;
+									}
+									break;
+								case 3:
+									cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
+									cout << left << setw(5) << "1" << setw(15) << "11:00AM" << setw(15) << "RM 56.00" << endl;
+									cout << left << setw(5) << "2" << setw(15) << "14:00PM" << setw(15) << "RM 56.00" << endl;
+									cout << left << setw(5) << "3" << setw(15) << "16:00PM" << setw(15) << "RM 56.00" << endl;
+									cout << "\nPlease choose your departure time : ";
+									cin >> deptime2;
+									if (deptime2 == 1) {
+										ftime = 11.00;
+										money = 56.00;
+									}
+									else if (deptime2 == 2) {
+										ftime = 14.00;
+										money = 56.00;
+									}
+									else if (deptime2 == 3) {
+										ftime = 16.00;
+										money = 56.00;
+									}
+									break;
+								default:
+									cout << "Invalid";
+									break;
+								}
+								cout << endl;
+								cout << "Departure date : ";
+								cin >> date1;
+								cout << "Number of pax : ";
+								cin >> pax;
+
+								cout << "\nTICKET CONFIRMATION" << endl;
+								cout << "--------------------" << endl;
+								cout << "Train No : " << trainno << endl;
+								cout << "Departure Time : " << ftime << ":00";
+								if (ftime >= 12) {
+									cout << "PM\n";
+								}
+								else {
+									cout << "AM\n";
+								}
+								cout << "Departure Date : " << date1 << endl;
+								cout << "Number of pax : " << pax << endl;
+								cout << "Price : RM" << money << ".00" << endl;
+							}
+							else if (choice1 == 'y' || choice1 == 'Y') {
+								break;
+							}
+							else {
+								cout << "Invalid" << endl;
+							}
+						} while (choice1 != 'y' || choice1 != 'Y');
+					}
+					else if (choice2 == 'n' || choice2 == 'N') {
+						break;
+					}
+				} while (choice2 != 'n' || choice2 != 'N');
+
+				cout << "                                              ____ \n";
+				cout << "    __________   ========  |      __      |  |    |       \n";
+				cout << "   / |        |     ||     |     |  |     |  |     |      \n";
+				cout << "  /--         |     ||     |    |    |    |  |      |   \n";
+				cout << "  |           |     ||     |   |      |   |  |       |   \n";
+				cout << "   -----------      ||     |__|        |__|  |_______|    \n";
+				cout << "    000   000                                          \n";
+
+
+
+
+
+
+
+
+
+
+
+
+
+		}else if (menu_choose == 2) {
 			cout << "\nCONTACT US\n";
 			cout << "Call/Whatsapp : 012-3456789\n";
 			cout << "Email : abc123@gmail.com\n";
