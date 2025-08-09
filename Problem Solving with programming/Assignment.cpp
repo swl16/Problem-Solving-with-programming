@@ -514,6 +514,11 @@ int main()
 					}
 				} while (choice2 != 'n' || choice2 != 'N');
 
+
+				const double process = 0.50;
+				double total = 0.0;
+
+
 				cout << "                                              ____ \n";
 				cout << "    __________   ========  |      __      |  |    |       \n";
 				cout << "   / |        |     ||     |     |  |     |  |     |      \n";
