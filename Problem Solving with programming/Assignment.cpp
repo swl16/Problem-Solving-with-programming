@@ -521,8 +521,14 @@ int main()
 				cout << "  |           |     ||     |   |      |   |  |       |   \n";
 				cout << "   -----------      ||     |__|        |__|  |_______|    \n";
 				cout << "    000   000                                          \n";
+				cout << "==============================================================\n";
 
+				cout << "Name : " << user_name << endl;
+				cout << "IC Number / Passport Number : " << ic_number << endl;
+				cout << "Phone Number : +60" << phone_number << endl;
+				cout << "Email : " << email << endl;
 
+				cout << "1. Train No " << trainno << setw(20) << "RM " << money << ".00" << endl;
 
 
 
