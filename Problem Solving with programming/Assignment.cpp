@@ -13,12 +13,13 @@ void Menu() {
 
 int main()
 {
-	cout << "    __________  \n";
-	cout << "   / |        | \n";
-	cout << "  /--         | \n";
-	cout << "  |           | \n";
-	cout << "   -----------  \n";
-	cout << "    000   000   \n";
+	cout << "                                              ____ \n";
+	cout << "    __________   ========  |      __      |  |    |       \n";
+	cout << "   / |        |     ||     |     |  |     |  |     |      \n";
+	cout << "  /--         |     ||     |    |    |    |  |      |   \n";
+	cout << "  |           |     ||     |   |      |   |  |       |   \n";
+	cout << "   -----------      ||     |__|        |__|  |_______|    \n";
+	cout << "    000   000                                          \n";
 
 	cout << "\nWelcome to TWD Train Ticket Booking System!\n\n";
 
