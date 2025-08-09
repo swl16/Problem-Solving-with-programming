@@ -5,10 +5,11 @@ using namespace std;
 
 void Menu() {
 	cout << "\nWelcome to TWD Train Ticket Booking System!\n";
-	cout << "Please choose. (1-3)\n";
 	cout << "1. BUY TICKET \n";
 	cout << "2. CONTACT US \n";
 	cout << "3. EXIT \n";
+	cout << endl;
+	cout << "Please choose. (1-3): \n";
 }
 
 int main()
@@ -86,7 +87,6 @@ int main()
 
 	do{
 		Menu();
-		cout << "CHOICE : ";
 		cin >> menu_choose;
 
 		if (menu_choose == 1) {
