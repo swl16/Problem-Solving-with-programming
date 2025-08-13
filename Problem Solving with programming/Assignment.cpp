@@ -531,7 +531,7 @@ int main()
 				cout << "Phone Number : +60" << phone_number << endl;
 				cout << "Email : " << email << endl;
 
-				cout << "1. Train No " << trainno << setw(20) << "RM " << money << ".00" << endl;
+				cout << "1. Train No " << trainno << setw(30) << "RM " << money << ".00" << endl;
 
 
 
