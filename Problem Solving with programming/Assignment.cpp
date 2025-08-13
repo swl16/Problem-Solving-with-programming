@@ -84,7 +84,7 @@ int main()
 
 	int menu_choose;
 	
-	int trainno, deptime, deptime1, deptime2, ftime, pax;
+	int trainno, deptime, deptime1, deptime2, ftime=0, pax;
 	string date1, date2;
 	char choice1;
 	char choice2;
@@ -297,7 +297,7 @@ int main()
 					else {
 						cout << "Invalid" << endl;
 					}
-				} while (choice1 != 'y' || choice1 != 'Y');
+				} while (choice1 != 'y' && choice1 != 'Y');
 
 				do {
 					cout << "Do you need to add on?(Y/N) : ";
@@ -507,12 +507,12 @@ int main()
 							else {
 								cout << "Invalid" << endl;
 							}
-						} while (choice1 != 'y' || choice1 != 'Y');
+						} while (choice1 != 'y' && choice1 != 'Y');
 					}
 					else if (choice2 == 'n' || choice2 == 'N') {
 						break;
 					}
-				} while (choice2 != 'n' || choice2 != 'N');
+				} while (choice2 != 'n' && choice2 != 'N');
 
 
 				const double process = 0.50;
