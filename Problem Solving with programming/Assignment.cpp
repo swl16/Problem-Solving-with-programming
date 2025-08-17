@@ -83,7 +83,7 @@ int main()
 
 	int menu_choose;
 	
-	int trainno, deptime, deptime1, deptime2, ftime=0, pax;
+	int trainno, trainno1, deptime, deptime1, deptime2, ftime=0, pax;
 	string date1, date2;
 	char choice1;
 	char choice2;
@@ -311,10 +311,10 @@ int main()
 						cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
 
 						cout << "\nPlease choose your train number : ";
-						cin >> trainno;
+						cin >> trainno1;
 						cout << endl;
 
-						switch (trainno) {
+						switch (trainno1) {
 						case 1:
 							cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
 							cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
@@ -387,7 +387,7 @@ int main()
 
 						cout << "\nTICKET CONFIRMATION" << endl;
 						cout << "--------------------" << endl;
-						cout << "Train No : " << trainno << endl;
+						cout << "Train No : " << trainno1 << endl;
 						cout << "Departure Time : " << ftime << ":00";
 						if (ftime >= 12) {
 							cout << "PM\n";
@@ -412,10 +412,10 @@ int main()
 								cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
 
 								cout << "\nPlease choose your train number : ";
-								cin >> trainno;
+								cin >> trainno1;
 								cout << endl;
 
-								switch (trainno) {
+								switch (trainno1) {
 								case 1:
 									cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
 									cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
@@ -488,7 +488,7 @@ int main()
 
 								cout << "\nTICKET CONFIRMATION" << endl;
 								cout << "--------------------" << endl;
-								cout << "Train No : " << trainno << endl;
+								cout << "Train No : " << trainno1 << endl;
 								cout << "Departure Time : " << ftime << ":00";
 								if (ftime >= 12) {
 									cout << "PM\n";
