@@ -516,6 +516,7 @@ int main()
 
 				const double process = 0.50;
 				double total = 0.0;
+				double sub = 0.0;
 
 
 				cout << "    __________   ========  |      __      |   =====       \n";
@@ -531,10 +532,22 @@ int main()
 				cout << "Phone Number : +60" << phone_number << endl;
 				cout << "Email : " << email << endl;
 
-				cout << "1. Train No " << trainno << setw(30) << "RM " << money << ".00" << endl;
+				if (choice2 == 'y' || choice2 == 'Y') {
 
+					cout << "1. Train No " << trainno << setw(20) << "RM " << money << ".00" << endl;
+					cout << "2. Train No " << trainno1 << setw(20) << "RM " << money << ".00" << endl;
+					cout << "---------------------------------------------------------\n";
 
+					sub = money + money;
+					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
+					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
 
+					total = sub + process;
+
+					cout << "---------------------------------------------------------\n";
+					cout << left << setw(30) << "Total : " << "RM " << total << endl;
+
+				}
 
 
 
