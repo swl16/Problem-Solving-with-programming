@@ -26,15 +26,15 @@ int main()
 	string user_name, email, ic_number;
 	int phone_number;
 
-	cout << "Please fill in your personal's infomation before you book your train ticket. \n\n";
+	cout << "Please fill in your personal's information before you book your train ticket. \n\n";
 	cout << "---------------------------------------------------------------------------------\n";
-	cout << "PASSENGER INFOMATION  \n";
+	cout << "PASSENGER INFORMATION  \n";
 	cout << "User Name (as per IC) : ";
 	getline(cin, user_name);
 	cout << "IC Number / Passport Number (without -) : ";
 	cin >> ic_number;
 
-	cout << "\nCONTACT INFOMATION\n";
+	cout << "\nCONTACT INFORMATION\n";
 	cout << "Phone number (without -) : +60";
 	cin >> phone_number;
 	cout << "Email : ";
@@ -48,7 +48,7 @@ int main()
 		cin >> choice;
 		if (choice == 'N' || choice == 'n') {
 			cout << "\nGoing back to menu.\n\n";
-			cout << "PASSENGER INFOMATION  \n";
+			cout << "PASSENGER INFORMATION  \n";
 			cout << "User Name (as per IC) : ";
 			cin.ignore();
 			getline(cin, user_name);
@@ -71,7 +71,7 @@ int main()
 
 
 
-	cout << "\nThis is the infomation.\n\n";
+	cout << "\nThis is the information.\n\n";
 	cout << "Name : " << user_name << endl;
 	cout << "IC Number / Passport Number : " << ic_number << endl;
 	cout << "Phone Number : +60" << phone_number << endl;
