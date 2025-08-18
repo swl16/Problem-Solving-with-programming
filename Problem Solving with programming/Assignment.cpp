@@ -518,6 +518,7 @@ int main()
 				double total = 0.0, amount = 0.0, amount1 = 0.0;
 				double sub = 0.0;
 				int payment;
+				string method;
 
 
 				cout << "    __________   ========  |      __      |   =====       \n";
@@ -559,6 +560,15 @@ int main()
 					cout << "3. Debit card" << endl;
 					cout << "\nPlease select : ";
 					cin >> payment;
+					if (payment == 1) {
+						method = "E-wallet\n";
+					}
+					else if (payment == 2) {
+						method = "Credit card\n";
+					}
+					else if (payment == 3) {
+						method = "Debit card\n";
+					}
 
 					cout << endl;
 
@@ -589,16 +599,7 @@ int main()
 					cout << "---------------------------------------------------------\n";
 					cout << left << setw(30) << "Total : " << "RM " << total << endl;
 
-					cout << "\nPayment menthod : " << payment << endl;
-					if (payment == 1) {
-						cout << "E-wallet\n";
-					}
-					else if (payment == 2) {
-						cout << "Credit card\n";
-					}
-					else if (payment == 3) {
-						cout << "Debit card\n";
-					}
+					cout << "\nPayment menthod : " << method << endl;
 
 					cout << "Payment amount : RM " << total << endl;
 					cout << "------------------------------------------------------------------------------------\n";
@@ -628,6 +629,15 @@ int main()
 					cout << "3. Debit card" << endl;
 					cout << "\nPlease select : ";
 					cin >> payment;
+					if (payment == 1) {
+						method = "E-wallet\n";
+					}
+					else if (payment == 2) {
+						method = "Credit card\n";
+					}
+					else if (payment == 3) {
+						method = "Debit card\n";
+					}
 
 					cout << endl;
 
@@ -649,28 +659,19 @@ int main()
 					cout << "--------------------------------------------------------------\n";
 
 					cout << "1. Train No " << trainno << setw(10) << "x" << pax << setw(10) << "RM " << amount << ".00" << endl;
-					cout << "---------------------------------------------------------\n";
+					cout << "--------------------------------------------------------------\n";
 
 					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
 					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
 
-					cout << "---------------------------------------------------------\n";
+					cout << "--------------------------------------------------------------\n";
 					cout << left << setw(30) << "Total : " << "RM " << total << endl;
 
-					cout << "\nPayment menthod : " << payment << endl;
-					if (payment == 1) {
-						cout << "E-wallet\n";
-					}
-					else if (payment == 2) {
-						cout << "Credit card\n";
-					}
-					else if (payment == 3) {
-						cout << "Debit card\n";
-					}
+					cout << "\nPayment menthod : " << method << endl;
 
 					cout << "Payment amount : RM " << total << endl;
 					cout << "------------------------------------------------------------------------------------\n";
-					cout << "Thank you. The QR code will be sent to your email after you complete the transaction.";
+					cout << "Thank you. The QR code will be sent to your email after you complete the transaction.\n";
 					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com";
 				}
 
