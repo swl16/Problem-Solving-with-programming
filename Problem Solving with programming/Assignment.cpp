@@ -517,6 +517,7 @@ int main()
 				const double process = 0.50;
 				double total = 0.0, amount = 0.0, amount1 = 0.0;
 				double sub = 0.0;
+				int payment;
 
 
 				cout << "    __________   ========  |      __      |   =====       \n";
@@ -531,10 +532,6 @@ int main()
 				cout << "IC Number / Passport Number : " << ic_number << endl;
 				cout << "Phone Number : +60" << phone_number << endl;
 				cout << "Email : " << email << endl;
-
-				cout << "--------------------------------------------------------------\n";
-				cout << "RECEIPT" << setw(30) << endl;
-				cout << "--------------------------------------------------------------\n";
 
 
 				if (choice2 == 'y' || choice2 == 'Y') {
@@ -555,6 +552,53 @@ int main()
 
 					cout << "---------------------------------------------------------\n";
 					cout << left << setw(30) << "Total : " << "RM " << total << endl;
+
+					cout << "\nPlease select your payment menthod." << endl;
+					cout << "1. E-wallet" << endl;
+					cout << "2. Credit card" << endl;
+					cout << "3. Debit card" << endl;
+					cout << "\nPlease select : ";
+					cin >> payment;
+
+					cout << endl;
+
+					cout << "    __________   ========  |      __      |   =====       \n";
+					cout << "   / |        |     ||     |     |  |     |  |      \\      \n";
+					cout << "  /--         |     ||     |    |    |    |  |       |   \n";
+					cout << "  |           |     ||     |   |      |   |  |       |   \n";
+					cout << "   -----------      ||     |__|        |__|  |______/    \n";
+					cout << "    000   000                                          \n";
+					cout << "==============================================================\n";
+
+					cout << "Name : " << user_name << endl;
+					cout << "IC Number / Passport Number : " << ic_number << endl;
+					cout << "Phone Number : +60" << phone_number << endl;
+					cout << "Email : " << email << endl;
+
+					cout << "--------------------------------------------------------------\n";
+					cout << "RECEIPT" << setw(30) << endl;
+					cout << "--------------------------------------------------------------\n";
+
+					cout << "1. Train No " << trainno << setw(10) << "x" << pax << setw(10) << "RM " << amount << ".00" << endl;
+					cout << "2. Train No " << trainno1 << setw(10) << "x" << pax1 << setw(10) << "RM " << amount1 << ".00" << endl;
+					cout << "---------------------------------------------------------\n";
+
+					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
+					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
+
+					cout << "---------------------------------------------------------\n";
+					cout << left << setw(30) << "Total : " << "RM " << total << endl;
+
+					cout << "\nPayment menthod : " << payment << endl;
+					if (payment == 1) {
+						cout << "E-wallet\n";
+					}
+					else if (payment == 2) {
+						cout << "Credit card\n";
+					}
+					else if (payment == 3) {
+						cout << "Debit card\n";
+					}
 
 				}
 
