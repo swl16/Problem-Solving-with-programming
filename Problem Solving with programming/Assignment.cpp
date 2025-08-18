@@ -83,7 +83,7 @@ int main()
 
 	int menu_choose;
 	
-	int trainno, trainno1, deptime, deptime1, deptime2, ftime=0, pax;
+	int trainno, trainno1, deptime, deptime1, deptime2, ftime=0, pax,pax1;
 	string date1, date2;
 	char choice1;
 	char choice2;
@@ -383,7 +383,7 @@ int main()
 						cout << "Departure date : ";
 						cin >> date1;
 						cout << "Number of pax : ";
-						cin >> pax;
+						cin >> pax1;
 
 						cout << "\nTICKET CONFIRMATION" << endl;
 						cout << "--------------------" << endl;
@@ -396,7 +396,7 @@ int main()
 							cout << "AM\n";
 						}
 						cout << "Departure Date : " << date1 << endl;
-						cout << "Number of pax : " << pax << endl;
+						cout << "Number of pax : " << pax1 << endl;
 						cout << "Price : RM" << money << ".00" << endl;
 
 						do {
@@ -484,7 +484,7 @@ int main()
 								cout << "Departure date : ";
 								cin >> date1;
 								cout << "Number of pax : ";
-								cin >> pax;
+								cin >> pax1;
 
 								cout << "\nTICKET CONFIRMATION" << endl;
 								cout << "--------------------" << endl;
@@ -497,7 +497,7 @@ int main()
 									cout << "AM\n";
 								}
 								cout << "Departure Date : " << date1 << endl;
-								cout << "Number of pax : " << pax << endl;
+								cout << "Number of pax : " << pax1 << endl;
 								cout << "Price : RM" << money << ".00" << endl;
 							}
 							else if (choice1 == 'y' || choice1 == 'Y') {
@@ -515,7 +515,7 @@ int main()
 
 
 				const double process = 0.50;
-				double total = 0.0;
+				double total = 0.0, amount = 0.0, amount1 = 0.0;
 				double sub = 0.0;
 
 
@@ -532,13 +532,22 @@ int main()
 				cout << "Phone Number : +60" << phone_number << endl;
 				cout << "Email : " << email << endl;
 
+				cout << "--------------------------------------------------------------\n";
+				cout << setw(30) << "RECEIPT" << endl;
+				cout << "--------------------------------------------------------------\n";
+
+
 				if (choice2 == 'y' || choice2 == 'Y') {
 
-					cout << "1. Train No " << trainno << setw(20) << "RM " << money << ".00" << endl;
-					cout << "2. Train No " << trainno1 << setw(20) << "RM " << money << ".00" << endl;
+					amount = money * pax;
+					amount1 = money * pax1;
+
+					cout << "1. Train No " << trainno << setw(10) << "x" << pax << setw(10) << "RM " << amount << ".00" << endl;
+					cout << "2. Train No " << trainno1 << setw(10) << "x" << pax1 << setw(10) << "RM " << amount1 << ".00" << endl;
 					cout << "---------------------------------------------------------\n";
 
-					sub = money + money;
+					sub = amount + amount1;
+
 					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
 					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
 
