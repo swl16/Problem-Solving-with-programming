@@ -676,12 +676,6 @@ int main()
 				}
 
 
-
-
-
-
-
-
 		}else if (menu_choose == 2) {
 			cout << "\nCONTACT US\n";
 			cout << "Call/Whatsapp : 012-3456789\n";
