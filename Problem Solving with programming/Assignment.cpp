@@ -600,6 +600,78 @@ int main()
 						cout << "Debit card\n";
 					}
 
+					cout << "Payment amount : RM " << total << endl;
+					cout << "------------------------------------------------------------------------------------\n";
+					cout << "Thank you. The QR code will be sent to your email after you complete the transaction.";
+					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com";
+				}
+				else if (choice2 == 'n' || choice2 == 'N') {
+
+					amount = money * pax;
+
+					cout << "1. Train No " << trainno << setw(10) << "x" << pax << setw(10) << "RM " << amount << ".00" << endl;
+					cout << "---------------------------------------------------------\n";
+
+					sub = amount;
+
+					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
+					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
+
+					total = sub + process;
+
+					cout << "---------------------------------------------------------\n";
+					cout << left << setw(30) << "Total : " << "RM " << total << endl;
+
+					cout << "\nPlease select your payment menthod." << endl;
+					cout << "1. E-wallet" << endl;
+					cout << "2. Credit card" << endl;
+					cout << "3. Debit card" << endl;
+					cout << "\nPlease select : ";
+					cin >> payment;
+
+					cout << endl;
+
+					cout << "    __________   ========  |      __      |   =====       \n";
+					cout << "   / |        |     ||     |     |  |     |  |      \\      \n";
+					cout << "  /--         |     ||     |    |    |    |  |       |   \n";
+					cout << "  |           |     ||     |   |      |   |  |       |   \n";
+					cout << "   -----------      ||     |__|        |__|  |______/    \n";
+					cout << "    000   000                                          \n";
+					cout << "==============================================================\n";
+
+					cout << "Name : " << user_name << endl;
+					cout << "IC Number / Passport Number : " << ic_number << endl;
+					cout << "Phone Number : +60" << phone_number << endl;
+					cout << "Email : " << email << endl;
+
+					cout << "--------------------------------------------------------------\n";
+					cout << "RECEIPT" << setw(30) << endl;
+					cout << "--------------------------------------------------------------\n";
+
+					cout << "1. Train No " << trainno << setw(10) << "x" << pax << setw(10) << "RM " << amount << ".00" << endl;
+					cout << "---------------------------------------------------------\n";
+
+					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
+					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
+
+					cout << "---------------------------------------------------------\n";
+					cout << left << setw(30) << "Total : " << "RM " << total << endl;
+
+					cout << "\nPayment menthod : " << payment << endl;
+					if (payment == 1) {
+						cout << "E-wallet\n";
+					}
+					else if (payment == 2) {
+						cout << "Credit card\n";
+					}
+					else if (payment == 3) {
+						cout << "Debit card\n";
+					}
+
+					cout << "Payment amount : RM " << total << endl;
+					cout << "------------------------------------------------------------------------------------\n";
+					cout << "Thank you. The QR code will be sent to your email after you complete the transaction.";
+					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com";
 				}
 
 
