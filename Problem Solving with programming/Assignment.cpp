@@ -87,6 +87,7 @@ int main()
 	
 	int trainno, trainno1, deptime, deptime1, deptime2, pax, pax1, time = 0;
 	int ftime[] = { 10, 11, 12, 13, 14, 15, 16, };
+	double fare[] = { 50,56,96 };
 	string date1, date2;
 	char choice1;
 	char choice2;
@@ -117,15 +118,15 @@ int main()
 					cin >> deptime;
 					if (deptime == 1) {
 						time = ftime[0];
-						money = 96.00;
+						money = fare[2];
 					}
 					else if (deptime == 2) {
 						time = ftime[2];
-						money = 96.00;
+						money = fare[2];
 					}
 					else if (deptime == 3) {
 						time = ftime[5];
-						money = 96.00;
+						money = fare[2];
 					}
 					break;
 				case 2:
@@ -137,15 +138,15 @@ int main()
 					cin >> deptime1;
 					if (deptime1 == 1) {
 						time = ftime[0];
-						money = 50.00;
+						money = fare[0];
 					}
 					else if (deptime1 == 2) {
 						time = ftime[3];
-						money = 50.00;
+						money = fare[0];
 					}
 					else if (deptime1 == 3) {
 						time = ftime[6];
-						money = 50.00;
+						money = fare[0];
 					}
 					break;
 				case 3:
@@ -157,15 +158,15 @@ int main()
 					cin >> deptime2;
 					if (deptime2 == 1) {
 						time = ftime[1];
-						money = 56.00;
+						money = fare[1];
 					}
 					else if (deptime2 == 2) {
 						time = ftime[4];
-						money = 56.00;
+						money = fare[1];
 					}
 					else if (deptime2 == 3) {
 						time = ftime[6];
-						money = 56.00;
+						money = fare[1];
 					}
 					break;
 				default:
@@ -218,15 +219,15 @@ int main()
 							cin >> deptime;
 							if (deptime == 1) {
 								time = ftime[0];
-								money = 96.00;
+								money = fare[2];
 							}
 							else if (deptime == 2) {
 								time = ftime[2];
-								money = 96.00;
+								money = fare[2];
 							}
 							else if (deptime == 3) {
 								time = ftime[5];
-								money = 96.00;
+								money = fare[2];
 							}
 							break;
 						case 2:
@@ -236,17 +237,17 @@ int main()
 							cout << left << setw(5) << "3" << setw(15) << "16:00PM" << setw(15) << "RM 50.00" << endl;
 							cout << "\nPlease choose your departure time : ";
 							cin >> deptime1;
-							if (deptime1 == 1) {
+							if (deptime == 1) {
 								time = ftime[0];
-								money = 50.00;
+								money = fare[0];
 							}
-							else if (deptime1 == 2) {
+							else if (deptime == 2) {
 								time = ftime[3];
-								money = 50.00;
+								money = fare[0];
 							}
-							else if (deptime1 == 3) {
+							else if (deptime == 3) {
 								time = ftime[6];
-								money = 50.00;
+								money = fare[0];
 							}
 							break;
 						case 3:
@@ -258,15 +259,15 @@ int main()
 							cin >> deptime2;
 							if (deptime2 == 1) {
 								time = ftime[1];
-								money = 56.00;
+								money = fare[1];
 							}
 							else if (deptime2 == 2) {
 								time = ftime[4];
-								money = 56.00;
+								money = fare[1];
 							}
 							else if (deptime2 == 3) {
 								time = ftime[6];
-								money = 56.00;
+								money = fare[1];
 							}
 							break;
 						default:
@@ -327,15 +328,15 @@ int main()
 							cin >> deptime;
 							if (deptime == 1) {
 								time = ftime[0];
-								money = 96.00;
+								money = fare[2];
 							}
 							else if (deptime == 2) {
 								time = ftime[2];
-								money = 96.00;
+								money = fare[2];
 							}
 							else if (deptime == 3) {
 								time = ftime[5];
-								money = 96.00;
+								money = fare[2];
 							}
 							break;
 						case 2:
@@ -347,15 +348,15 @@ int main()
 							cin >> deptime1;
 							if (deptime1 == 1) {
 								time = ftime[0];
-								money = 50.00;
+								money = fare[0];
 							}
 							else if (deptime1 == 2) {
 								time = ftime[3];
-								money = 50.00;
+								money = fare[0];
 							}
 							else if (deptime1 == 3) {
 								time = ftime[6];
-								money = 50.00;
+								money = fare[0];
 							}
 							break;
 						case 3:
@@ -367,15 +368,15 @@ int main()
 							cin >> deptime2;
 							if (deptime2 == 1) {
 								time = ftime[1];
-								money = 56.00;
+								money = fare[1];
 							}
 							else if (deptime2 == 2) {
 								time = ftime[4];
-								money = 56.00;
+								money = fare[1];
 							}
 							else if (deptime2 == 3) {
 								time = ftime[6];
-								money = 56.00;
+								money = fare[1];
 							}
 							break;
 						default:
@@ -428,15 +429,15 @@ int main()
 									cin >> deptime;
 									if (deptime == 1) {
 										time = ftime[0];
-										money = 96.00;
+										money = fare[2];
 									}
 									else if (deptime == 2) {
 										time = ftime[2];
-										money = 96.00;
+										money = fare[2];
 									}
 									else if (deptime == 3) {
 										time = ftime[5];
-										money = 96.00;
+										money = fare[2];
 									}
 									break;
 								case 2:
@@ -448,15 +449,15 @@ int main()
 									cin >> deptime1;
 									if (deptime1 == 1) {
 										time = ftime[0];
-										money = 50.00;
+										money = fare[0];
 									}
 									else if (deptime1 == 2) {
 										time = ftime[3];
-										money = 50.00;
+										money = fare[0];
 									}
 									else if (deptime1 == 3) {
 										time = ftime[6];
-										money = 50.00;
+										money = fare[0];
 									}
 									break;
 								case 3:
@@ -468,15 +469,15 @@ int main()
 									cin >> deptime2;
 									if (deptime2 == 1) {
 										time = ftime[1];
-										money = 56.00;
+										money = fare[1];
 									}
 									else if (deptime2 == 2) {
 										time = ftime[4];
-										money = 56.00;
+										money = fare[1];
 									}
 									else if (deptime2 == 3) {
 										time = ftime[6];
-										money = 56.00;
+										money = fare[1];
 									}
 									break;
 								default:
