@@ -292,7 +292,7 @@ int main()
 						}
 						cout << "Departure Date : " << date1 << endl;
 						cout << "Number of pax : " << pax << endl;
-						cout << "Price : RM" << money << ".00" << endl;
+						cout << "Price : RM" << money << ".00 per person" << endl;
 					}
 					else if (choice1 == 'y' || choice1 == 'Y') {
 						break;
@@ -401,7 +401,7 @@ int main()
 						}
 						cout << "Departure Date : " << date1 << endl;
 						cout << "Number of pax : " << pax1 << endl;
-						cout << "Price : RM" << money << ".00" << endl;
+						cout << "Price : RM" << money << ".00 per person" << endl;
 
 						do {
 							cout << "\nPlease confirm your ticket is correct(Y/N) : ";
@@ -608,7 +608,7 @@ int main()
 					cout << "Payment amount : RM " << fixed << setprecision(2) << total << endl;
 					cout << "------------------------------------------------------------------------------------\n";
 					cout << "Thank you. The QR code will be sent to your email after you complete the transaction.";
-					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com";
+					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com\n";
 				}
 				else if (choice2 == 'n' || choice2 == 'N') {
 
@@ -676,7 +676,7 @@ int main()
 					cout << "Payment amount : RM " << fixed << setprecision(2) << total << endl;
 					cout << "------------------------------------------------------------------------------------\n";
 					cout << "Thank you. The QR code will be sent to your email after you complete the transaction.\n";
-					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com";
+					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com\n";
 				}
 
 
