@@ -593,8 +593,8 @@ int main()
 					cout << "RECEIPT" << setw(30) << endl;
 					cout << "--------------------------------------------------------------\n";
 
-					cout << "1. Train No " << trainno << setw(10) << "x" << pax << setw(10) << "RM " << amount << ".00" << endl;
-					cout << "2. Train No " << trainno1 << setw(10) << "x" << pax1 << setw(10) << "RM " << amount1 << ".00" << endl;
+					cout << "1. Train No " << trainno << setw(10) << "x" << pax << setw(10) << "RM " << amount << endl;
+					cout << "2. Train No " << trainno1 << setw(10) << "x" << pax1 << setw(10) << "RM " << amount1 << endl;
 					cout << "---------------------------------------------------------\n";
 
 					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
@@ -662,7 +662,7 @@ int main()
 					cout << "RECEIPT" << setw(30) << endl;
 					cout << "--------------------------------------------------------------\n";
 
-					cout << "1. Train No " << trainno << setw(10) << "x" << pax << setw(10) << "RM " << amount << ".00" << endl;
+					cout << "1. Train No " << trainno << setw(10) << "x" << pax << setw(10) << "RM " << amount  << endl;
 					cout << "--------------------------------------------------------------\n";
 
 					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
