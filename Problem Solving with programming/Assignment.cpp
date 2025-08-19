@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include<cstdlib>
+#include<cctype>
 using namespace std;
 
 void Menu() {
@@ -83,7 +85,8 @@ int main()
 
 	int menu_choose;
 	
-	int trainno, trainno1, deptime, deptime1, deptime2, ftime=0, pax,pax1;
+	int trainno, trainno1, deptime, deptime1, deptime2, pax, pax1, time = 0;
+	int ftime[] = { 10, 11, 12, 13, 14, 15, 16, };
 	string date1, date2;
 	char choice1;
 	char choice2;
@@ -113,15 +116,15 @@ int main()
 					cout << "\nPlease choose your departure time : ";
 					cin >> deptime;
 					if (deptime == 1) {
-						ftime = 10.00;
+						time = ftime[0];
 						money = 96.00;
 					}
 					else if (deptime == 2) {
-						ftime = 12.00;
+						time = ftime[2];
 						money = 96.00;
 					}
 					else if (deptime == 3) {
-						ftime = 15.00;
+						time = ftime[5];
 						money = 96.00;
 					}
 					break;
@@ -133,15 +136,15 @@ int main()
 					cout << "\nPlease choose your departure time : ";
 					cin >> deptime1;
 					if (deptime1 == 1) {
-						ftime = 10.00;
+						time = ftime[0];
 						money = 50.00;
 					}
 					else if (deptime1 == 2) {
-						ftime = 13.00;
+						time = ftime[3];
 						money = 50.00;
 					}
 					else if (deptime1 == 3) {
-						ftime = 16.00;
+						time = ftime[6];
 						money = 50.00;
 					}
 					break;
@@ -153,15 +156,15 @@ int main()
 					cout << "\nPlease choose your departure time : ";
 					cin >> deptime2;
 					if (deptime2 == 1) {
-						ftime = 11.00;
+						time = ftime[1];
 						money = 56.00;
 					}
 					else if (deptime2 == 2) {
-						ftime = 14.00;
+						time = ftime[4];
 						money = 56.00;
 					}
 					else if (deptime2 == 3) {
-						ftime = 16.00;
+						time = ftime[6];
 						money = 56.00;
 					}
 					break;
@@ -178,8 +181,8 @@ int main()
 				cout << "\nTICKET CONFIRMATION" << endl;
 				cout << "--------------------" << endl;
 				cout << "Train No : " << trainno << endl;
-				cout << "Departure Time : " << ftime << ":00";
-				if (ftime >= 12) {
+				cout << "Departure Time : " << time << ":00";
+				if (time >= 12) {
 					cout << "PM\n";
 				}
 				else {
@@ -214,15 +217,15 @@ int main()
 							cout << "\nPlease choose your departure time : ";
 							cin >> deptime;
 							if (deptime == 1) {
-								ftime = 10.00;
+								time = ftime[0];
 								money = 96.00;
 							}
 							else if (deptime == 2) {
-								ftime = 12.00;
+								time = ftime[2];
 								money = 96.00;
 							}
 							else if (deptime == 3) {
-								ftime = 15.00;
+								time = ftime[5];
 								money = 96.00;
 							}
 							break;
@@ -234,15 +237,15 @@ int main()
 							cout << "\nPlease choose your departure time : ";
 							cin >> deptime1;
 							if (deptime1 == 1) {
-								ftime = 10.00;
+								time = ftime[0];
 								money = 50.00;
 							}
 							else if (deptime1 == 2) {
-								ftime = 13.00;
+								time = ftime[3];
 								money = 50.00;
 							}
 							else if (deptime1 == 3) {
-								ftime = 16.00;
+								time = ftime[6];
 								money = 50.00;
 							}
 							break;
@@ -254,15 +257,15 @@ int main()
 							cout << "\nPlease choose your departure time : ";
 							cin >> deptime2;
 							if (deptime2 == 1) {
-								ftime = 11.00;
+								time = ftime[1];
 								money = 56.00;
 							}
 							else if (deptime2 == 2) {
-								ftime = 14.00;
+								time = ftime[4];
 								money = 56.00;
 							}
 							else if (deptime2 == 3) {
-								ftime = 16.00;
+								time = ftime[6];
 								money = 56.00;
 							}
 							break;
@@ -279,8 +282,8 @@ int main()
 						cout << "\nTICKET CONFIRMATION" << endl;
 						cout << "--------------------" << endl;
 						cout << "Train No : " << trainno << endl;
-						cout << "Departure Time : " << ftime << ":00";
-						if (ftime >= 12) {
+						cout << "Departure Time : " << time << ":00";
+						if (time >= 12) {
 							cout << "PM\n";
 						}
 						else {
@@ -311,10 +314,10 @@ int main()
 						cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
 
 						cout << "\nPlease choose your train number : ";
-						cin >> trainno1;
+						cin >> trainno;
 						cout << endl;
 
-						switch (trainno1) {
+						switch (trainno) {
 						case 1:
 							cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
 							cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
@@ -323,15 +326,15 @@ int main()
 							cout << "\nPlease choose your departure time : ";
 							cin >> deptime;
 							if (deptime == 1) {
-								ftime = 10.00;
+								time = ftime[0];
 								money = 96.00;
 							}
 							else if (deptime == 2) {
-								ftime = 12.00;
+								time = ftime[2];
 								money = 96.00;
 							}
 							else if (deptime == 3) {
-								ftime = 15.00;
+								time = ftime[5];
 								money = 96.00;
 							}
 							break;
@@ -343,15 +346,15 @@ int main()
 							cout << "\nPlease choose your departure time : ";
 							cin >> deptime1;
 							if (deptime1 == 1) {
-								ftime = 10.00;
+								time = ftime[0];
 								money = 50.00;
 							}
 							else if (deptime1 == 2) {
-								ftime = 13.00;
+								time = ftime[3];
 								money = 50.00;
 							}
 							else if (deptime1 == 3) {
-								ftime = 16.00;
+								time = ftime[6];
 								money = 50.00;
 							}
 							break;
@@ -363,15 +366,15 @@ int main()
 							cout << "\nPlease choose your departure time : ";
 							cin >> deptime2;
 							if (deptime2 == 1) {
-								ftime = 11.00;
+								time = ftime[1];
 								money = 56.00;
 							}
 							else if (deptime2 == 2) {
-								ftime = 14.00;
+								time = ftime[4];
 								money = 56.00;
 							}
 							else if (deptime2 == 3) {
-								ftime = 16.00;
+								time = ftime[6];
 								money = 56.00;
 							}
 							break;
@@ -383,20 +386,20 @@ int main()
 						cout << "Departure date : ";
 						cin >> date1;
 						cout << "Number of pax : ";
-						cin >> pax1;
+						cin >> pax;
 
 						cout << "\nTICKET CONFIRMATION" << endl;
 						cout << "--------------------" << endl;
-						cout << "Train No : " << trainno1 << endl;
-						cout << "Departure Time : " << ftime << ":00";
-						if (ftime >= 12) {
+						cout << "Train No : " << trainno << endl;
+						cout << "Departure Time : " << time << ":00";
+						if (time >= 12) {
 							cout << "PM\n";
 						}
 						else {
 							cout << "AM\n";
 						}
 						cout << "Departure Date : " << date1 << endl;
-						cout << "Number of pax : " << pax1 << endl;
+						cout << "Number of pax : " << pax << endl;
 						cout << "Price : RM" << money << ".00" << endl;
 
 						do {
@@ -412,10 +415,10 @@ int main()
 								cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
 
 								cout << "\nPlease choose your train number : ";
-								cin >> trainno1;
+								cin >> trainno;
 								cout << endl;
 
-								switch (trainno1) {
+								switch (trainno) {
 								case 1:
 									cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
 									cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
@@ -424,15 +427,15 @@ int main()
 									cout << "\nPlease choose your departure time : ";
 									cin >> deptime;
 									if (deptime == 1) {
-										ftime = 10.00;
+										time = ftime[0];
 										money = 96.00;
 									}
 									else if (deptime == 2) {
-										ftime = 12.00;
+										time = ftime[2];
 										money = 96.00;
 									}
 									else if (deptime == 3) {
-										ftime = 15.00;
+										time = ftime[5];
 										money = 96.00;
 									}
 									break;
@@ -444,15 +447,15 @@ int main()
 									cout << "\nPlease choose your departure time : ";
 									cin >> deptime1;
 									if (deptime1 == 1) {
-										ftime = 10.00;
+										time = ftime[0];
 										money = 50.00;
 									}
 									else if (deptime1 == 2) {
-										ftime = 13.00;
+										time = ftime[3];
 										money = 50.00;
 									}
 									else if (deptime1 == 3) {
-										ftime = 16.00;
+										time = ftime[6];
 										money = 50.00;
 									}
 									break;
@@ -464,15 +467,15 @@ int main()
 									cout << "\nPlease choose your departure time : ";
 									cin >> deptime2;
 									if (deptime2 == 1) {
-										ftime = 11.00;
+										time = ftime[1];
 										money = 56.00;
 									}
 									else if (deptime2 == 2) {
-										ftime = 14.00;
+										time = ftime[4];
 										money = 56.00;
 									}
 									else if (deptime2 == 3) {
-										ftime = 16.00;
+										time = ftime[6];
 										money = 56.00;
 									}
 									break;
@@ -484,20 +487,20 @@ int main()
 								cout << "Departure date : ";
 								cin >> date1;
 								cout << "Number of pax : ";
-								cin >> pax1;
+								cin >> pax;
 
 								cout << "\nTICKET CONFIRMATION" << endl;
 								cout << "--------------------" << endl;
-								cout << "Train No : " << trainno1 << endl;
-								cout << "Departure Time : " << ftime << ":00";
-								if (ftime >= 12) {
+								cout << "Train No : " << trainno << endl;
+								cout << "Departure Time : " << time << ":00";
+								if (time >= 12) {
 									cout << "PM\n";
 								}
 								else {
 									cout << "AM\n";
 								}
 								cout << "Departure Date : " << date1 << endl;
-								cout << "Number of pax : " << pax1 << endl;
+								cout << "Number of pax : " << pax << endl;
 								cout << "Price : RM" << money << ".00" << endl;
 							}
 							else if (choice1 == 'y' || choice1 == 'Y') {
@@ -547,12 +550,12 @@ int main()
 					sub = amount + amount1;
 
 					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
-					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
+					cout << left << setw(30) << "Processing Fee : " << "RM " << fixed << setprecision(2) << process << endl;
 
 					total = sub + process;
 
 					cout << "---------------------------------------------------------\n";
-					cout << left << setw(30) << "Total : " << "RM " << total << endl;
+					cout << left << setw(30) << "Total : " << "RM " << fixed << setprecision(2) << total << endl;
 
 					cout << "\nPlease select your payment menthod." << endl;
 					cout << "1. E-wallet" << endl;
@@ -594,14 +597,14 @@ int main()
 					cout << "---------------------------------------------------------\n";
 
 					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
-					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
+					cout << left << setw(30) << "Processing Fee : " << "RM " << fixed << setprecision(2) << process << endl;
 
 					cout << "---------------------------------------------------------\n";
-					cout << left << setw(30) << "Total : " << "RM " << total << endl;
+					cout << left << setw(30) << "Total : " << "RM " << fixed << setprecision(2) << total << endl;
 
 					cout << "\nPayment menthod : " << method << endl;
 
-					cout << "Payment amount : RM " << total << endl;
+					cout << "Payment amount : RM " << fixed << setprecision(2) << total << endl;
 					cout << "------------------------------------------------------------------------------------\n";
 					cout << "Thank you. The QR code will be sent to your email after you complete the transaction.";
 					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com";
@@ -616,12 +619,12 @@ int main()
 					sub = amount;
 
 					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
-					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
+					cout << left << setw(30) << "Processing Fee : " << "RM " << fixed << setprecision(2) << process << endl;
 
 					total = sub + process;
 
 					cout << "---------------------------------------------------------\n";
-					cout << left << setw(30) << "Total : " << "RM " << total << endl;
+					cout << left << setw(30) << "Total : " << "RM " << fixed << setprecision(2) << total << endl;
 
 					cout << "\nPlease select your payment menthod." << endl;
 					cout << "1. E-wallet" << endl;
@@ -662,14 +665,14 @@ int main()
 					cout << "--------------------------------------------------------------\n";
 
 					cout << left << setw(30) << "Subtotal : " << "RM " << sub << endl;
-					cout << left << setw(30) << "Processing Fee : " << "RM " << process << endl;
+					cout << left << setw(30) << "Processing Fee : " << "RM " << fixed << setprecision(2) << process << endl;
 
 					cout << "--------------------------------------------------------------\n";
-					cout << left << setw(30) << "Total : " << "RM " << total << endl;
+					cout << left << setw(30) << "Total : " << "RM " << fixed << setprecision(2) << total << endl;
 
 					cout << "\nPayment menthod : " << method << endl;
 
-					cout << "Payment amount : RM " << total << endl;
+					cout << "Payment amount : RM " << fixed << setprecision(2) << total << endl;
 					cout << "------------------------------------------------------------------------------------\n";
 					cout << "Thank you. The QR code will be sent to your email after you complete the transaction.\n";
 					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com";
