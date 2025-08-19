@@ -314,10 +314,10 @@ int main()
 						cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
 
 						cout << "\nPlease choose your train number : ";
-						cin >> trainno;
+						cin >> trainno1;
 						cout << endl;
 
-						switch (trainno) {
+						switch (trainno1) {
 						case 1:
 							cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
 							cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
@@ -386,11 +386,11 @@ int main()
 						cout << "Departure date : ";
 						cin >> date1;
 						cout << "Number of pax : ";
-						cin >> pax;
+						cin >> pax1;
 
 						cout << "\nTICKET CONFIRMATION" << endl;
 						cout << "--------------------" << endl;
-						cout << "Train No : " << trainno << endl;
+						cout << "Train No : " << trainno1 << endl;
 						cout << "Departure Time : " << time << ":00";
 						if (time >= 12) {
 							cout << "PM\n";
@@ -399,7 +399,7 @@ int main()
 							cout << "AM\n";
 						}
 						cout << "Departure Date : " << date1 << endl;
-						cout << "Number of pax : " << pax << endl;
+						cout << "Number of pax : " << pax1 << endl;
 						cout << "Price : RM" << money << ".00" << endl;
 
 						do {
@@ -415,10 +415,10 @@ int main()
 								cout << left << setw(10) << "003" << setw(15) << "KL Sentral" << setw(15) << "Ipoh" << endl;
 
 								cout << "\nPlease choose your train number : ";
-								cin >> trainno;
+								cin >> trainno1;
 								cout << endl;
 
-								switch (trainno) {
+								switch (trainno1) {
 								case 1:
 									cout << left << setw(5) << "NO" << setw(15) << "DEPARTURE TIME" << setw(15) << "MIN.FARE" << endl;
 									cout << left << setw(5) << "1" << setw(15) << "10:00AM" << setw(15) << "RM 96.00" << endl;
@@ -487,11 +487,11 @@ int main()
 								cout << "Departure date : ";
 								cin >> date1;
 								cout << "Number of pax : ";
-								cin >> pax;
+								cin >> pax1;
 
 								cout << "\nTICKET CONFIRMATION" << endl;
 								cout << "--------------------" << endl;
-								cout << "Train No : " << trainno << endl;
+								cout << "Train No : " << trainno1 << endl;
 								cout << "Departure Time : " << time << ":00";
 								if (time >= 12) {
 									cout << "PM\n";
@@ -500,7 +500,7 @@ int main()
 									cout << "AM\n";
 								}
 								cout << "Departure Date : " << date1 << endl;
-								cout << "Number of pax : " << pax << endl;
+								cout << "Number of pax : " << pax1 << endl;
 								cout << "Price : RM" << money << ".00" << endl;
 							}
 							else if (choice1 == 'y' || choice1 == 'Y') {
