@@ -501,7 +501,7 @@ int main()
 								}
 								cout << "Departure Date : " << date1 << endl;
 								cout << "Number of pax : " << pax1 << endl;
-								cout << "Price : RM" << money << ".00/1" << endl;
+								cout << "Price : RM" << money << ".00 per person" << endl;
 							}
 							else if (choice1 == 'y' || choice1 == 'Y') {
 								break;
