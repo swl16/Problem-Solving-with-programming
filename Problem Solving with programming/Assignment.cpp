@@ -546,7 +546,8 @@ int main()
 				cout << "Email : " << email << endl;
 
 
-		
+				while (choice2 != 'y' && choice2 != 'Y')
+				{
 
 					amount = money * pax;
 					amount1 = money * pax1;
@@ -623,8 +624,9 @@ int main()
 					cout << "Thank you. The QR code will be sent to your email after you complete the transaction.";
 					cout << "If you do not receive the email, please contact our customer service +60123456789 or email to abc123@gmail.com\n";
 
-				
 
+
+				}
 
 		}else if (menu_choose == 2) {
 			cout << "\nCONTACT US\n";
